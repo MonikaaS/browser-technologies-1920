@@ -65,7 +65,7 @@ oplossing is om alle componenten in je build samen te voegen en minify te gebrui
 
 niet kunnen testen, apparaat gaf aan dat GitHub geen veilige site is
 
-![huawei](docs/img/readme/img_2188.jpg)
+![huawei](docs/img/readme/IMG_2188.jpg)
 
 #### apple iPod touch:
 - safari on apple iPod touch, running iOS 5.01
