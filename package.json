@@ -1,0 +1,31 @@
+{
+  "name": "browser-technologies-1920",
+  "version": "1.0.0",
+  "description": "//Robuuste, toegankelijke websites ontwerpen en maken …",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MonikaaS/browser-technologies-1920.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MonikaaS/browser-technologies-1920/issues"
+  },
+  "homepage": "https://github.com/MonikaaS/browser-technologies-1920#readme"
+}
