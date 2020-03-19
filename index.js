@@ -12,10 +12,14 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 let text = "";
+let stap1 = "";
+let stap2 = "";
 
 //post route for selecting/writing values
 app.post("/save", function(req, res) {
-  var stap3 = req.body.stap3;
+  stap1 = req.body.stap1;
+  stap2 = req.body.stap2;
+  let stap3 = req.body.stap3;
   //add the new task from the post route
   text = stap3;
   res.redirect("/");
@@ -25,7 +29,9 @@ app.post("/save", function(req, res) {
 //render the ejs and display added task, completed task
 app.get("/", function(req, res) {
   res.render("pages/index", {
-    text: text
+    text: text,
+    stap1: stap1,
+    stap2: stap2
   });
 });
 
