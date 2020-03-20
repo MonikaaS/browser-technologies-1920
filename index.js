@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-const port = 4000;
 const bodyParser = require("body-parser");
 
 app.use(
@@ -34,7 +33,5 @@ app.get("/", function(req, res) {
   });
 });
 
-//set app to listen on port 4000
-app.listen(port, function() {
-  console.log("server is running on port 4000");
-});
+//app.listen(port, () => console.log(`Example app listening on port ${port}`));
+app.listen(process.env.PORT || 4000);
