@@ -6,6 +6,8 @@
 
 # Feedback vrijdag 20 maart
 
+link naar [demo](https://monikaas-browser-techt.herokuapp.com/)
+
 Momenteel ben ik bezig met mijn css only laag(nog niet af). Keuzes die je maakt worden wel al opgeslagen.
 
 1. Ik ben nu bezig om met de radio buttons :checked de shirt previews te laten zien, je kan kiezen uit een trui en een shirt. Nu probeer ik ook nog is de kleur aan te passen. Het selecteren van shirt en trui is gelukt, nu probeer ik ook nog is daarboven op er voor te zorgen dat je van beide de kleur kan aanpassen. Graag hoor ik hoe ik dat het beste kan aanpakken.
