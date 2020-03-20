@@ -19,9 +19,8 @@ let stap2 = "";
 app.post("/save", function(req, res) {
   stap1 = req.body.stap1;
   stap2 = req.body.stap2;
-  let stap3 = req.body.stap3;
-  //add the new task from the post route
-  text = stap3;
+  text = req.body.stap3;
+
   res.redirect("/");
   console.log(text);
 });
