@@ -17,7 +17,8 @@ h1 {
     color: white;
 }
 
-.form {
+.form,
+.orderConfirmed {
     background-color: white;
     width: 50%;
     padding: 1em;
@@ -70,7 +71,9 @@ label {
 #roze,
 #paars,
 #zwart,
-#wit {
+#zwart1,
+#wit,
+#wit1 {
     position: absolute;
     opacity: 0;
 }
@@ -93,7 +96,9 @@ label {
 #roze+span,
 #paars+span,
 #zwart+span,
-#wit+span {
+#wit+span,
+#zwart1+span,
+#wit1+span {
     width: 2em;
     height: 2em;
     margin: 0.25em;
@@ -148,7 +153,11 @@ label {
 #zwart:checked+span,
 #zwart:focus+span,
 #wit:checked+span,
-#wit:focus+span {
+#wit:focus+span,
+#zwart1:checked+span,
+#zwart1:focus+span,
+#wit1:checked+span,
+#wit1:focus+span {
     transform: scale(1.1);
     border-color: rgb(175, 175, 248);
     -webkit-transition: all 0.3s ease-in-outs;
@@ -163,7 +172,9 @@ label {
 #roze:hover+span,
 #paars:hover+span,
 #zwart:hover+span,
-#wit:hover+span {
+#wit:hover+span,
+#zwart1:hover+span,
+#wit1:hover+span {
     transform: scale(1.1);
     border: 0.25em dashed;
 }
@@ -220,4 +231,57 @@ button:focus {
     display: flex;
     left: 50%;
     margin: 0 auto;
+}
+
+/*--- svg tekst styling ---*/
+.text {
+    font-size: 1.2em;
+    font-family: 'Zilla Slab', serif;
+    font-weight: 100;
+}
+
+.orderConfirmed {
+    align-items: center;
+    width: 60%;
+}
+
+.svg {
+    -webkit-transition: all 0.3s ease-in-outs;
+    transition: all 0.3s ease-in-out;
+    width: 80%;
+}
+
+.svg:hover {
+    transform: scale(1.1);
+    stroke-dasharray: 20;
+    animation: dash 10s linear;
+}
+
+a {
+    display: inline-block;
+    position: sticky;
+    top: 1em;
+    font-family: 'Baloo Chettan 2', cursive;
+    font-size: 1em;
+    margin: 1em;
+    margin-bottom: 0;
+    padding: 0.2em;
+    border: 0.20em solid black;
+    -webkit-transition: all 0.3s ease-in-outs;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    outline: none;
+    transform: scale(1.1);
+    border: 0.2em dashed;
+    background-color: white;
+}
+
+.titelOrder {
+    margin: 0;
 }

@@ -13,7 +13,7 @@
   <h1>Ontwerp je shirt!</h1>
 
 
-<form class="form" action ="/save" method="POST">
+<form class="form">
 
 <div>
 <h2>Stap 1:</h2>
@@ -112,16 +112,26 @@ shirt</label>
 <h2>Stap 3:</h2>
 <label class="textInput" for="text">Vul hier de tekst in voor op het shirt
 <input type="text" id="text" name="stap3" value="<%= text %>"></label>
+
+<p>Kies de tekst kleur:</p>
+
+<div class="group">
+<label for="zwart1">
+<input type="radio" id="zwart1" name="stap4" value="zwart" <% if (stap3== "zwart") { %>
+ checked 
+<% } %>><span style="background-color:#2e2e2e;"></span>zwart</label>
+
+<label for="wit1">
+<input type="radio" id="wit1" name="stap4" value="wit" <% if (stap3== "wit") { %>
+ checked 
+<% } %>>
+<span></span>wit</label>
+</div>
 </div>
 
 <div class="groupButton">
-<button>opslaan</button>
-</form>
-
-<form action ="/order" method="POST">
-<button>bestellen</button>
-</form>
+<button type="submit" formaction="/save" formmethod="post">opslaan</button>
+<button type="submit" formaction="/order" formmethod="post">printen</button>
 </div>
-
-    
-  </body>
+</form>    
+</body>
