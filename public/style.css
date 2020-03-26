@@ -17,7 +17,7 @@ h1 {
     color: white;
 }
 
-form {
+.form {
     background-color: white;
     width: 50%;
     padding: 1em;
@@ -170,22 +170,25 @@ label {
 
 /*--- text input styling ---*/
 input[type=text] {
+    font-size: 0.65em;
     border: 0.25em solid;
-    height: 3em;
-    width: 40%;
-    margin: 2em auto;
+    padding: 1em;
+    width: 30%;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
     -webkit-transition: all 0.3s ease-in-outs;
     transition: all 0.3s ease-in-out;
 }
 
 input[type=text]:hover {
-    transform: scale(1.1);
     border: 0.25em dashed;
 }
 
 input[type=text]:focus {
     outline: none;
-    border-color: rgb(175, 175, 248);
+    background-color: rgb(175, 175, 248);
     font-family: 'Baloo Chettan 2', cursive;
 }
 
@@ -193,4 +196,28 @@ input[type=text]:focus {
     text-align: center;
 }
 
-/*--- button styling ---/
+/*--- button styling ---*/
+button {
+    font-family: 'Baloo Chettan 2', cursive;
+    font-size: 0.5em;
+    margin: 1em;
+    border: 0.25em solid;
+    height: 4em;
+    -webkit-transition: all 0.3s ease-in-outs;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover,
+button:focus {
+    outline: none;
+    transform: scale(1.1);
+    border: 0.25em dashed;
+    background-color: rgb(175, 175, 248);
+}
+
+.groupButton {
+    padding: 0;
+    display: flex;
+    left: 50%;
+    margin: 0 auto;
+}
