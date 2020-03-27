@@ -286,3 +286,27 @@ a:focus {
 .titelOrder {
     margin: 0;
 }
+
+/*--- preview ---*/
+.preview {
+    display: none;
+    width: 40%;
+    padding: 1em;
+}
+
+.previewTrui,
+.previewShirt {
+    display: none;
+    width: 40%;
+    margin: 0 auto;
+    fill: white;
+    -webkit-transition: all 0.3s ease-in-outs;
+    transition: all 0.3s ease-in-out;
+}
+
+previewGroup {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    flex-direction: column;
+}

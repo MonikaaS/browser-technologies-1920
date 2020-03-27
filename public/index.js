@@ -73,6 +73,37 @@ function jsStyling() {
 }
 
 function shirtPreview() {
+    const preview = document.querySelector(".preview")
+    const shirt = document.querySelector(".previewShirt")
+    const trui = document.querySelector(".previewTrui")
+
+    preview.style.display = 'initial'
+
+    document.querySelector('#shirt').addEventListener("click", function () {
+        shirt.style.display = 'block'
+        trui.style.display = 'none'
+    });
+
+    document.querySelector('#trui').addEventListener("click", function () {
+        trui.style.display = 'block'
+        shirt.style.display = 'none'
+    });
+
+    document.querySelector('#blauw').addEventListener("click", function () {
+        shirt.style.fill = ' #4144f0'
+        trui.style.fill = ' #4144f0'
+    });
+
+    document.querySelector('#groen').addEventListener("click", function () {
+        shirt.style.fill = '#31e083'
+        trui.style.fill = '#31e083'
+    });
+
+    document.querySelector('#geel').addEventListener("click", function () {
+        shirt.style.fill = '#f2f26b'
+        trui.style.fill = '#f2f26b'
+    });
+
 
 }
 
