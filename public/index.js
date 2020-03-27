@@ -53,5 +53,30 @@ if (storageAvailable('localStorage')) {
     //hier komt dat ik dan naar array push met een value en key, en of de checkbox true of false is
 }
 
+function jsStyling() {
+    const form = document.querySelector(".form")
+    const group = document.querySelector(".group")
+    const input = document.querySelector("input[type=text]")
+    const h1 = document.querySelector("h1")
+
+    h1.style.position = "sticky";
+    h1.style.top = "0";
+
+    form.style.margin = 0 + "em";
+    form.style.width = 20 + "%";
+    form.style.position = "absolute";
+    form.style.top = "0";
+
+    group.style.flexWrap = "nowrap";
+
+    input.style.width = 100 + "%";
+}
+
+function shirtPreview() {
+
+}
+
 removeButton()
 storageAvailable()
+jsStyling()
+shirtPreview()

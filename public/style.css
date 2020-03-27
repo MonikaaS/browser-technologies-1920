@@ -6,6 +6,8 @@ body {
     margin: 0;
     background-color: #A9C9FF;
     background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: 'Zilla Slab', serif;
 
 }
@@ -40,7 +42,6 @@ p {
 }
 
 svg {
-    width: 40%;
     padding: 0;
     stroke: black;
     fill: none;
