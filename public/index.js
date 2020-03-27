@@ -3,6 +3,7 @@ function removeButton() {
     elem.style.display = 'none';
 }
 
+//got the code from: https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Local_storage
 function storageAvailable() {
     try {
         var storage = window['localStorage'],
