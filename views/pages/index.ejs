@@ -117,12 +117,12 @@ shirt</label>
 
 <div class="group">
 <label for="zwart1">
-<input type="radio" id="zwart1" name="stap4" value="zwart" <% if (stap3== "zwart") { %>
+<input type="radio" id="zwart1" name="stap4" value="zwart1" <% if (stap3== "zwart") { %>
  checked 
 <% } %>><span style="background-color:#2e2e2e;"></span>zwart</label>
 
 <label for="wit1">
-<input type="radio" id="wit1" name="stap4" value="wit" <% if (stap3== "wit") { %>
+<input type="radio" id="wit1" name="stap4" value="wit1" <% if (stap3== "wit") { %>
  checked 
 <% } %>>
 <span></span>wit</label>
@@ -133,5 +133,7 @@ shirt</label>
 <button type="submit" formaction="/save" formmethod="post">opslaan</button>
 <button type="submit" formaction="/order" formmethod="post">printen</button>
 </div>
-</form>    
+</form>   
+
+<script type="module" src="index.js"></script>
 </body>
