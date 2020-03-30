@@ -78,6 +78,17 @@ function shirtPreview() {
     const trui = document.querySelector(".previewTrui")
 
     preview.style.display = 'initial'
+    shirt.style.display = 'block'
+
+    if (document.getElementById("shirt").checked == true) {
+        shirt.style.display = 'block'
+        trui.style.display = 'none'
+        console.log('shirt')
+    } else if (document.getElementById("trui").checked == true) {
+        trui.style.display = 'block'
+        shirt.style.display = 'none'
+        console.log('trui')
+    }
 
     document.querySelector('#shirt').addEventListener("click", function () {
         shirt.style.display = 'block'
@@ -88,26 +99,53 @@ function shirtPreview() {
         trui.style.display = 'block'
         shirt.style.display = 'none'
     });
+}
 
-    document.querySelector('#blauw').addEventListener("click", function () {
-        shirt.style.fill = ' #4144f0'
-        trui.style.fill = ' #4144f0'
-    });
+function changeColor() {
+    const shirtPreview = document.querySelector('.previewShirt');
+    const truiPreview = document.querySelector('.previewTrui');
 
-    document.querySelector('#groen').addEventListener("click", function () {
-        shirt.style.fill = '#31e083'
-        trui.style.fill = '#31e083'
-    });
+    for (i = 0; i < document.querySelectorAll('input[name=stap2]').length; i++) {
+        document.querySelectorAll('input[name=stap2]')[i].addEventListener("click", function () {
+            console.log(this.value)
 
-    document.querySelector('#geel').addEventListener("click", function () {
-        shirt.style.fill = '#f2f26b'
-        trui.style.fill = '#f2f26b'
-    });
+            shirtPreview.style.fill = this.value;
+            truiPreview.style.fill = this.value;
+        });
+    }
 
-
+    if (document.querySelector('#blauw').checked == true) {
+        shirtPreview.style.fill = '#4144f0';
+        truiPreview.style.fill = '#4144f0';
+    } else if (document.querySelector('#groen').checked == true) {
+        shirtPreview.style.fill = '#31e083';
+        truiPreview.style.fill = '#31e083';
+    } else if (document.querySelector('#geel').checked == true) {
+        shirtPreview.style.fill = '#f2f26b';
+        truiPreview.style.fill = '#f2f26b';
+    } else if (document.querySelector('#rood').checked == true) {
+        shirtPreview.style.fill = '#ed5858';
+        truiPreview.style.fill = '#ed5858';
+    } else if (document.querySelector('#oranje').checked == true) {
+        shirtPreview.style.fill = '#ed9458';
+        truiPreview.style.fill = '#ed9458';
+    } else if (document.querySelector('#roze').checked == true) {
+        shirtPreview.style.fill = '#f47aff';
+        truiPreview.style.fill = '#f47aff';
+    } else if (document.querySelector('#paars').checked == true) {
+        shirtPreview.style.fill = '#a963ff';
+        truiPreview.style.fill = '#a963ff';
+    } else if (document.querySelector('#zwart').checked == true) {
+        shirtPreview.style.fill = '#2e2e2e';
+        truiPreview.style.fill = '#2e2e2e';
+    } else if (document.querySelector('#white').checked == true) {
+        shirtPreview.style.fill = 'white';
+        truiPreview.style.fill = 'white';
+    }
 }
 
 removeButton()
 storageAvailable()
 jsStyling()
 shirtPreview()
+changeColor()
