@@ -149,7 +149,8 @@ function changeText() {
     document.querySelector('#text').addEventListener("input", function () {
         var input = document.getElementById('text').value
 
-        document.querySelector('.text').textContent = input;
+        document.querySelector('.textShirt').textContent = input;
+        document.querySelector('.textTrui').textContent = input;
     })
 }
 
