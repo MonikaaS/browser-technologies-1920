@@ -4,8 +4,8 @@ body {
     font-size: 1.5em;
     line-height: 1.5;
     margin: 0;
-    background-color: #A9C9FF;
-    background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+    background-color: rgb(9, 78, 197);
+    background-image: linear-gradient(180deg, rgb(9, 78, 197) 0%, rgb(255, 255, 255) 80%);
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: 'Zilla Slab', serif;
@@ -114,11 +114,17 @@ label {
 /*---add interaction to radio button ---*/
 
 #shirt:checked+svg,
-#shirt:focus+svg,
-#trui:checked+svg,
-#trui:focus+svg {
+#trui:checked+svg {
     border-color: rgb(175, 175, 248);
     fill: rgb(175, 175, 248);
+    -webkit-transition: all 0.3s ease-in-outs;
+    transition: all 0.3s ease-in-out;
+}
+
+#shirt:focus+svg,
+#trui:focus+svg {
+    border-color: rgb(101, 101, 245);
+    fill: rgb(101, 101, 245);
     -webkit-transition: all 0.3s ease-in-outs;
     transition: all 0.3s ease-in-out;
 }
@@ -159,8 +165,25 @@ label {
 #zwart1:focus+span,
 #wit1:checked+span,
 #wit1:focus+span {
-    transform: scale(1.1);
+    transform: scale(1.3);
     border-color: rgb(175, 175, 248);
+    -webkit-transition: all 0.3s ease-in-outs;
+    transition: all 0.3s ease-in-out;
+}
+
+#blauw:focus+span,
+#groen:focus+span,
+#geel:focus+span,
+#rood:focus+span,
+#oranje:focus+span,
+#roze:focus+span,
+#paars:focus+span,
+#zwart:focus+span,
+#wit:focus+span,
+#zwart1:focus+span,
+#wit1:focus+span {
+    transform: scale(1.3);
+    border-color: rgb(101, 101, 245);
     -webkit-transition: all 0.3s ease-in-outs;
     transition: all 0.3s ease-in-out;
 }
@@ -176,7 +199,7 @@ label {
 #wit:hover+span,
 #zwart1:hover+span,
 #wit1:hover+span {
-    transform: scale(1.1);
+    transform: scale(1.2);
     border: 0.25em dashed;
 }
 
@@ -223,7 +246,7 @@ button {
 button:hover,
 button:focus {
     outline: none;
-    transform: scale(1.1);
+    transform: scale(1.3);
     border: 0.25em dashed;
     background-color: rgb(175, 175, 248);
 }
@@ -254,7 +277,7 @@ button:focus {
 }
 
 .svg:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
     stroke-dasharray: 20;
     animation: dash 10s linear;
 }
