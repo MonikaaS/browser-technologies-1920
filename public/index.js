@@ -149,9 +149,31 @@ function changeText() {
     document.querySelector('#text').addEventListener("input", function () {
         var input = document.getElementById('text').value
 
-        document.querySelector('.textShirt').textContent = input;
-        document.querySelector('.textTrui').textContent = input;
+        document.querySelector('#textShirt').textContent = input;
+        document.querySelector('#textTrui').textContent = input;
     })
+}
+
+function changeTextColor() {
+    const textShirt = document.querySelector('#textShirt');
+    const textTrui = document.querySelector('#textTrui');
+
+    for (i = 0; i < document.querySelectorAll('input[name=stap4]').length; i++) {
+        document.querySelectorAll('input[name=stap4]')[i].addEventListener("click", function () {
+            console.log(this.value)
+
+            textShirt.style.fill = this.value;
+            textTrui.style.fill = this.value;
+        });
+    }
+
+    if (document.querySelector('#zwart1').checked == true) {
+        textShirt.style.fill = this.value;
+        textTrui.style.fill = this.value;
+    } else if (document.querySelector('#wit1').checked == true) {
+        textShirt.style.fill = this.value;
+        textTrui.style.fill = this.value;
+    }
 }
 
 
@@ -162,3 +184,4 @@ jsStyling()
 shirtPreview()
 changeColor()
 changeText()
+changeTextColor()
