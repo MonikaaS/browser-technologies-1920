@@ -31,12 +31,24 @@ if (storageAvailable('localStorage')) {
     console.log('Yippee! We can use localStorage awesomeness')
 
     var i, radiobuttons = document.querySelectorAll('input[type=radio]');
+    var textinput = document.querySelector('#text')
+    var textShirt = document.querySelector('#textShirt')
+    var textTrui = document.querySelector('#textTrui')
 
     for (i = 0; i < radiobuttons.length; i++) {
         radiobuttons[i].addEventListener("click", function () {
             save()
         });
     }
+
+    textinput.addEventListener("input", function () {
+        localStorage.setItem("text", textinput.value)
+    })
+
+    textinput.value = localStorage.getItem("text", textinput.value)
+    textShirt.textContent = localStorage.getItem("text", textinput.value)
+    textTrui.textContent = localStorage.getItem("text", textinput.value)
+
 
     function save() {
         for (i = 0; i < radiobuttons.length; i++) {
@@ -50,7 +62,7 @@ if (storageAvailable('localStorage')) {
     }
 } else {
     console.log('Too bad, no localStorage for us')
-    //hier komt dat ik dan naar array push met een value en key, en of de checkbox true of false is
+
 }
 
 function jsStyling() {
@@ -168,11 +180,11 @@ function changeTextColor() {
     }
 
     if (document.querySelector('#zwart1').checked == true) {
-        textShirt.style.fill = this.value;
-        textTrui.style.fill = this.value;
+        textShirt.style.fill = "#2e2e2e";
+        textTrui.style.fill = "#2e2e2e";
     } else if (document.querySelector('#wit1').checked == true) {
-        textShirt.style.fill = this.value;
-        textTrui.style.fill = this.value;
+        textShirt.style.fill = "#FFFFFF";
+        textTrui.style.fill = "#FFFFFF";
     }
 }
 
