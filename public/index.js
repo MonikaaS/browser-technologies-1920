@@ -10,15 +10,12 @@ function jsAvailable() {
 // show some styling only when js is activated
 function jsStyling() {
     const buttons = document.querySelector('.groupButton');
-    const form = document.querySelector(".form")
     const group = document.querySelector(".group")
     const saveButton = document.querySelector('#save');
     const orderButton = document.querySelector('#order');
 
     saveButton.style.display = 'none';
     orderButton.style.display = 'none';
-
-    form.style.width = 40 + "%";
 
     group.style.flexWrap = "nowrap";
 

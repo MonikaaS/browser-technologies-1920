@@ -24,7 +24,7 @@ h1 {
     background-color: white;
     width: 50%;
     padding: 1em;
-    margin: 2em auto;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -344,6 +344,29 @@ a:focus {
 }
 
 /*-- media queries --*/
+@media (max-width: 1200px) {
+
+    .previewGroup {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .form {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .preview {
+        width: 100%;
+    }
+
+    svg {
+        width: 100%;
+    }
+
+}
+
 @media print {
 
     a,
@@ -400,3 +423,4 @@ a:focus {
         -moz-box-shadow: none;
         -webkit-box-shadow: none;
     }
+}
