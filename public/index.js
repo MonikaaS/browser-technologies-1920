@@ -144,8 +144,20 @@ function changeColor() {
     }
 }
 
+function changeText() {
+
+    document.querySelector('#text').addEventListener("input", function () {
+        var input = document.getElementById('text').value
+
+        document.querySelector('.text').textContent = input;
+    })
+}
+
+
+
 removeButton()
 storageAvailable()
 jsStyling()
 shirtPreview()
 changeColor()
+changeText()
