@@ -185,7 +185,7 @@ input[type=text] {
     font-size: 0.65em;
     border: 0.25em solid;
     padding: 1em;
-    width: 30%;
+    width: 70%;
     margin-top: 1em;
     margin-left: auto;
     margin-right: auto;
@@ -258,6 +258,7 @@ button:focus {
     animation: dash 10s linear;
 }
 
+/*-- back button styling --*/
 a {
     display: inline-block;
     position: sticky;
@@ -289,24 +290,33 @@ a:focus {
 
 /*--- preview ---*/
 .preview {
+    top: 0;
+    position: sticky;
     display: none;
-    width: 40%;
-    padding: 1em;
+    width: 50%;
 }
 
 .previewTrui,
 .previewShirt {
     display: none;
-    width: 40%;
-    margin: 0 auto;
+    width: 100%;
     fill: white;
     -webkit-transition: all 0.3s ease-in-outs;
     transition: all 0.3s ease-in-out;
 }
 
-previewGroup {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-    flex-direction: column;
+.previewTrui:hover,
+.previewShirt:hover {
+    transform: scale(1.1);
+    stroke-dasharray: 20;
+    animation: dash 10s linear;
 }
+
+.previewGroup {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: flex-start
+}
+
+/*-- printstyles --*/

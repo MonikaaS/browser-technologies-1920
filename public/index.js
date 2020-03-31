@@ -1,6 +1,23 @@
-function removeButton() {
-    const elem = document.querySelector('.groupButton');
-    elem.style.display = 'none';
+function jsAvailable() {
+    jsStyling()
+    storageAvailable()
+    shirtPreview()
+    changeColor()
+    changeText()
+    changeTextColor()
+}
+
+// show some styling only when js is activated
+function jsStyling() {
+    const buttons = document.querySelector('.groupButton');
+    const form = document.querySelector(".form")
+    const group = document.querySelector(".group")
+
+    buttons.style.display = 'none';
+
+    form.style.width = 40 + "%";
+
+    group.style.flexWrap = "nowrap";
 }
 
 //got the code from: https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Local_storage
@@ -30,60 +47,49 @@ function storageAvailable() {
 if (storageAvailable('localStorage')) {
     console.log('Yippee! We can use localStorage awesomeness')
 
-    var i, radiobuttons = document.querySelectorAll('input[type=radio]');
+    var i, radiobutton = document.querySelectorAll('input[type=radio]');
     var textinput = document.querySelector('#text')
     var textShirt = document.querySelector('#textShirt')
     var textTrui = document.querySelector('#textTrui')
 
-    for (i = 0; i < radiobuttons.length; i++) {
-        radiobuttons[i].addEventListener("click", function () {
+    /*--- Put radio buttons in localstorage---*/
+    for (i = 0; i < radiobutton.length; i++) {
+        radiobutton[i].addEventListener("click", function () {
             save()
         });
     }
 
+    function save() {
+        for (i = 0; i < radiobutton.length; i++) {
+            localStorage.setItem(radiobutton[i].value, radiobutton[i].checked);
+        }
+    }
+
+    //load checked values of radio button
+    for (i = 0; i < radiobutton.length; i++) {
+        radiobutton[i].checked = localStorage.getItem(radiobutton[i].value) === 'true' ? true : false;
+    }
+
+    /*--- put text in local storage ---*/
     textinput.addEventListener("input", function () {
         localStorage.setItem("text", textinput.value)
     })
 
+    // load text
     textinput.value = localStorage.getItem("text", textinput.value)
     textShirt.textContent = localStorage.getItem("text", textinput.value)
     textTrui.textContent = localStorage.getItem("text", textinput.value)
 
-
-    function save() {
-        for (i = 0; i < radiobuttons.length; i++) {
-            localStorage.setItem(radiobuttons[i].value, radiobuttons[i].checked);
-        }
-    }
-
-    //for loading
-    for (i = 0; i < radiobuttons.length; i++) {
-        radiobuttons[i].checked = localStorage.getItem(radiobuttons[i].value) === 'true' ? true : false;
-    }
 } else {
     console.log('Too bad, no localStorage for us')
 
+    // when there's no localstorage, show the save button
+    const elem = document.querySelector('.groupButton');
+    elem.style.display = 'block';
+
 }
 
-function jsStyling() {
-    const form = document.querySelector(".form")
-    const group = document.querySelector(".group")
-    const input = document.querySelector("input[type=text]")
-    const h1 = document.querySelector("h1")
-
-    h1.style.position = "sticky";
-    h1.style.top = "0";
-
-    form.style.margin = 0 + "em";
-    form.style.width = 20 + "%";
-    form.style.position = "absolute";
-    form.style.top = "0";
-
-    group.style.flexWrap = "nowrap";
-
-    input.style.width = 100 + "%";
-}
-
+// show selected shirt or trui
 function shirtPreview() {
     const preview = document.querySelector(".preview")
     const shirt = document.querySelector(".previewShirt")
@@ -91,16 +97,6 @@ function shirtPreview() {
 
     preview.style.display = 'initial'
     shirt.style.display = 'block'
-
-    if (document.getElementById("shirt").checked == true) {
-        shirt.style.display = 'block'
-        trui.style.display = 'none'
-        console.log('shirt')
-    } else if (document.getElementById("trui").checked == true) {
-        trui.style.display = 'block'
-        shirt.style.display = 'none'
-        console.log('trui')
-    }
 
     document.querySelector('#shirt').addEventListener("click", function () {
         shirt.style.display = 'block'
@@ -111,8 +107,20 @@ function shirtPreview() {
         trui.style.display = 'block'
         shirt.style.display = 'none'
     });
+
+    //check which type is selected and show the right preview
+    if (document.getElementById("shirt").checked == true) {
+        shirt.style.display = 'block'
+        trui.style.display = 'none'
+        console.log('shirt')
+    } else if (document.getElementById("trui").checked == true) {
+        trui.style.display = 'block'
+        shirt.style.display = 'none'
+        console.log('trui')
+    }
 }
 
+// Change color of shirt or trui
 function changeColor() {
     const shirtPreview = document.querySelector('.previewShirt');
     const truiPreview = document.querySelector('.previewTrui');
@@ -125,6 +133,8 @@ function changeColor() {
             truiPreview.style.fill = this.value;
         });
     }
+
+    //check which color is selected and show the right color in preview
 
     if (document.querySelector('#blauw').checked == true) {
         shirtPreview.style.fill = '#4144f0';
@@ -150,12 +160,13 @@ function changeColor() {
     } else if (document.querySelector('#zwart').checked == true) {
         shirtPreview.style.fill = '#2e2e2e';
         truiPreview.style.fill = '#2e2e2e';
-    } else if (document.querySelector('#white').checked == true) {
+    } else if (document.querySelector('#wit').checked == true) {
         shirtPreview.style.fill = 'white';
         truiPreview.style.fill = 'white';
     }
 }
 
+// Change text of shirt or trui
 function changeText() {
 
     document.querySelector('#text').addEventListener("input", function () {
@@ -166,6 +177,7 @@ function changeText() {
     })
 }
 
+// Change text of shirt or trui
 function changeTextColor() {
     const textShirt = document.querySelector('#textShirt');
     const textTrui = document.querySelector('#textTrui');
@@ -179,6 +191,7 @@ function changeTextColor() {
         });
     }
 
+    //check which color is selected and show the right text color preview
     if (document.querySelector('#zwart1').checked == true) {
         textShirt.style.fill = "#2e2e2e";
         textTrui.style.fill = "#2e2e2e";
@@ -188,12 +201,4 @@ function changeTextColor() {
     }
 }
 
-
-
-removeButton()
-storageAvailable()
-jsStyling()
-shirtPreview()
-changeColor()
-changeText()
-changeTextColor()
+jsAvailable()
