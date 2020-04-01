@@ -1,6 +1,6 @@
 # Browser Technologies @cmda-minor-web 1920
 
-//Robuuste, toegankelijke websites ontwerpen en maken …
+[live demo](https://monikaas-browser-techt.herokuapp.com/). 
 
 # Create your own shirt
 
