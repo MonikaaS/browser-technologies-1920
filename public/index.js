@@ -1,5 +1,6 @@
 function jsAvailable() {
     jsStyling()
+    printAvailable()
     storageAvailable()
     shirtPreview()
     changeColor()
@@ -9,7 +10,6 @@ function jsAvailable() {
 
 // show some styling only when js is activated
 function jsStyling() {
-    const buttons = document.querySelector('.groupButton');
     const group = document.querySelector(".group")
     const saveButton = document.querySelector('#save');
     const orderButton = document.querySelector('#order');
@@ -19,15 +19,33 @@ function jsStyling() {
 
     group.style.flexWrap = "nowrap";
 
-    //add print button
-    var html = `
-                <button id="print">print!</button>`
-    buttons.insertAdjacentHTML('beforeend', html)
+}
 
-    //print out page
-    document.querySelector('#print').addEventListener("click", function () {
-        window.print()
-    })
+//window.print() feature detection
+function printAvailable() {
+    const buttons = document.querySelector('.groupButton');
+
+    if (typeof window.print != 'undefined') {
+        console.log('yeah, we kunnen printen!')
+
+        //add print button
+        var html = `
+        <button type="button" id="printPage">print!</button>`
+        buttons.insertAdjacentHTML('beforeend', html)
+
+        //print out page
+        document.querySelector('#printPage').addEventListener("click", function () {
+            console.log('gaan we printen?')
+            window.print()
+        })
+    } else {
+        console.log('print functie doet t niet')
+
+        //add text to explain how to print
+        var html = `
+        <p>Ga naar je instelling van de browser om de pagina uit te printen!</p>`
+        buttons.insertAdjacentHTML('beforeend', html)
+    }
 }
 
 //got the code from: https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Local_storage
