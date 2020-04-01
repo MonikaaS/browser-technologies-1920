@@ -369,6 +369,10 @@ a:focus {
 
 @media print {
 
+    body {
+        background-color: transparent;
+    }
+
     a,
     button,
     label,
