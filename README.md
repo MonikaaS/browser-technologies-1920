@@ -17,7 +17,7 @@ In de functional laag gebruik ik alleen html. Het ziet er niet mooi uit, maar hi
 
 De gebruiker moet de meest basic functionaliteit kunnen uitvoeren. In dit geval een kleur uitkiezen en een tekst invoeren voor het shirt.
 
- ![functional layer](docs/img/functional2.png)
+![functional layer](docs/img/functional2.png)
 De gebruiker kan ook zijn keuzes op de server op slaan en de preview van zijn samen gestelde shirt bekijken.
 
 ## usable laag
@@ -102,6 +102,7 @@ if (typeof window.print != 'undefined') {
 ```
 
 **3. window.localstorage**
+
 Localstorage wordt in [hele oude browsers zoals IE 8 niet ondersteunt](https://caniuse.com/#search=localstorage), maar een gebruiker kan dit ook uitgezet hebben. 
 
 Omdat op te lossen kijk ik of de gebruiker localstorage aan heeft staan en als het bestaat, worden de geselecteerde keuzes toegevoegd:
@@ -168,7 +169,7 @@ belangrijk is om custom geselecteerd input elementen met `:focus` te stijlen, zo
 
 Als je alles semantische correct hebt geschreven, moet het voor screenreaders geen probleem zijn om je pagina uit te lezen.
 
-Let alleen wel op met hoe je bepaalde dingen omschrijft. Voor screenreader gebruiks is bijvoorbeeld de tekst: 
+Let alleen wel op met hoe je bepaalde dingen omschrijft. Voor screenreader gebruikers is bijvoorbeeld de tekst: 
 
 `Kies de kleur:` 
 
