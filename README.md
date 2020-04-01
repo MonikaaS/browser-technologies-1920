@@ -8,9 +8,9 @@ Ontwerp je eigen shirt met tekst, je moet het kunnen printen, opslaan en een vol
 
 ![met afbeelding](docs/img/pleasurable.png)
 
-# Progressive enhancement
+## Progressive enhancement
 
-## functional laag
+### functional laag
 ![functional layer](docs/img/functional.jpg)
 
 In de functional laag gebruik ik alleen html. Het ziet er niet mooi uit, maar hij werkt in alle browsers!
@@ -20,7 +20,7 @@ De gebruiker moet de meest basic functionaliteit kunnen uitvoeren. In dit geval 
 ![functional layer](docs/img/functional2.png)
 De gebruiker kan ook zijn keuzes op de server op slaan en de preview van zijn samen gestelde shirt bekijken.
 
-## usable laag
+### usable laag
 In deze laag heb ik css toegevoegd, zodat het voor de gebruiker wat gebruiksvriendelijker wordt. inputs zijn gestijld & css animaties zijn toegevoegd. 
 
 Kwa functionaliteiten werkt het precies nog het zelfde als de functional layer.
@@ -31,7 +31,7 @@ Kwa functionaliteiten werkt het precies nog het zelfde als de functional layer.
 
 ![functional layer](docs/img/usable3.png)
 
-## pleasurable laag
+### pleasurable laag
 
 Gebruiker krijgt meteen een preview te zien, waneer hij iets selecteerd. Je krijgt ook een printkop te zien, als je er op klikt kan je de pagina uit printen. Opslaan knop is weg, want nu wordt alles onchange opgeslagen in localstorage.
 
@@ -42,9 +42,9 @@ Als localstorage niet gesuport wordt, komt de save knop terug.
 
 
 
-# Feature detection
+## Feature detection
 
-## css
+### css
 
 **1. gradients:**
 
@@ -77,7 +77,7 @@ Voor de rest maak ik gebruik van **animaties, transforms, svg styling, flexbox, 
 
 Dit is puur voor esthetische redenen, dus maakt het niet veel uit als het niet werkt. De site blijft nog steeds functioneel.
 
-## js
+### js
 
 **1. es6**
 
@@ -142,7 +142,7 @@ if (storageAvailable('localStorage')) {
 ```
 
 
-# Accesibility
+## Accesibility
 
 Hieronder mijn audit op accesibility:
 
@@ -182,13 +182,13 @@ dat heb ik aangepast naar:
 
 Voeg bijvoorbeeld ook een `html lang` attribute toe, zo kan de screenreader zien welke taal de tekst is geschreven.
 
-# wireflows
+## wireflows
 
 ![met afbeelding](docs/img/readme/schets1.jpg)
 
 ![met afbeelding](docs/img/readme/schets2.jpg)
 
-# To do/wishlist
+## To do/wishlist
 
 - [ ] tekst kunnen verkleinen, vergroten etc.
 - [x] printen
