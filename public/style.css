@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Baloo+Chettan+2:400,500|Zilla+Slab&display=swap');
 
 body {
+    font-size: 20px;
     font-size: 1.5em;
     line-height: 1.5;
     margin: 0;
@@ -15,6 +16,7 @@ body {
 h1 {
     font-family: 'Baloo Chettan 2', cursive;
     text-align: center;
+    margin-top: 20px;
     margin-top: 1.5em;
     color: white;
 }
@@ -22,7 +24,8 @@ h1 {
 .form,
 .orderConfirmed {
     background-color: white;
-    width: 40%;
+    width: 45%;
+    padding: 16px;
     padding: 1em;
     margin: 0 auto;
     display: flex;
@@ -38,6 +41,7 @@ p {
     font-family: 'Baloo Chettan 2', cursive;
     font-weight: 400;
     text-align: center;
+    margin-top: 16px;
     margin-top: 1em;
 }
 
@@ -45,6 +49,7 @@ svg {
     padding: 0;
     stroke: black;
     fill: none;
+    stroke-width: 4px;
     stroke-width: .25em;
 }
 
@@ -84,6 +89,7 @@ label {
 #trui+svg {
     width: 90%;
     cursor: pointer;
+    border: 4px solid;
     border: 0.25em solid;
     -webkit-transition: all 0.3s ease-in-outs;
     transition: all 0.3s ease-in-out;
@@ -100,8 +106,11 @@ label {
 #wit+span,
 #zwart1+span,
 #wit1+span {
+    width: 32px;
+    height: 32px;
     width: 2em;
     height: 2em;
+    margin: 4px;
     margin: 0.25em;
     display: inline-block;
     vertical-align: top;
@@ -200,24 +209,31 @@ label {
 #zwart1:hover+span,
 #wit1:hover+span {
     transform: scale(1.2);
+    border: 4px dashed;
     border: 0.25em dashed;
 }
 
 /*--- text input styling ---*/
 input[type=text] {
+    font-size: 12px;
     font-size: 0.65em;
+    border: 4px solid;
     border: 0.25em solid;
+    padding: 16px;
     padding: 1em;
     width: 70%;
+    margin-top: 16px;
     margin-top: 1em;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 32px;
     margin-bottom: 2em;
     -webkit-transition: all 0.3s ease-in-outs;
     transition: all 0.3s ease-in-out;
 }
 
 input[type=text]:hover {
+    border: 4px dashed;
     border: 0.25em dashed;
 }
 
@@ -234,10 +250,14 @@ input[type=text]:focus {
 /*--- button styling ---*/
 button {
     font-family: 'Baloo Chettan 2', cursive;
+    font-size: 12px;
     font-size: 0.6em;
+    padding: 16px;
     padding: 1em;
+    margin: 16px;
     margin: 1em;
     border: 0.25em solid;
+    padding: 25px;
     height: 4em;
     -webkit-transition: all 0.3s ease-in-outs;
     transition: all 0.3s ease-in-out;
@@ -247,6 +267,7 @@ button:hover,
 button:focus {
     outline: none;
     transform: scale(1.3);
+    border: 4px dashed;
     border: 0.25em dashed;
     background-color: rgb(175, 175, 248);
 }
@@ -260,6 +281,7 @@ button:focus {
 
 /*--- svg tekst styling ---*/
 .text {
+    font-size: 16px;
     font-size: 1.2em;
     font-family: 'Zilla Slab', serif;
     font-weight: 100;
@@ -285,6 +307,7 @@ button:focus {
 /*-- back button styling --*/
 a {
     display: inline-block;
+    position: -webkit-sticky;
     position: sticky;
     top: 1em;
     font-family: 'Baloo Chettan 2', cursive;
@@ -292,6 +315,7 @@ a {
     margin: 1em;
     margin-bottom: 0;
     padding: 0.2em;
+    border: 4px solid black;
     border: 0.20em solid black;
     -webkit-transition: all 0.3s ease-in-outs;
     transition: all 0.3s ease-in-out;
@@ -315,6 +339,7 @@ a:focus {
 /*--- preview ---*/
 .preview {
     top: 0;
+    position: -webkit-sticky;
     position: sticky;
     display: none;
     width: 50%;
@@ -393,11 +418,13 @@ a:focus {
         visibility: visible;
         position: absolute;
         top: 0;
-        left: 5%;
+        left: 0;
+        text-align: center;
         content: "😎 bedankt voor het printen! 😎";
     }
 
     .preview:after {
+        text-align: center;
         visibility: visible;
         position: absolute;
         bottom: -10%;
@@ -407,7 +434,7 @@ a:focus {
 
 
     .previewGroup {
-        width: 40%;
+        width: 50%;
     }
 
     .previewTrui,
