@@ -10,20 +10,19 @@ function jsAvailable() {
 
 // show some styling only when js is activated
 function jsStyling() {
-    const group = document.querySelector('.group')
-    const saveButton = document.querySelector('#save')
-    const orderButton = document.querySelector('#order')
+    var group = document.querySelector('.group')
+    var saveButton = document.querySelector('#save')
+    var orderButton = document.querySelector('#order')
 
     saveButton.style.display = 'none'
     orderButton.style.display = 'none'
 
     group.style.flexWrap = 'nowrap'
-
 }
 
 //window.print() feature detection
 function printAvailable() {
-    const buttons = document.querySelector('.groupButton')
+    var buttons = document.querySelector('.groupButton')
 
     if (typeof window.print != 'undefined') {
         console.log('yeah, we kunnen printen!')
@@ -112,16 +111,16 @@ if (storageAvailable('localStorage')) {
     console.log('Too bad, no localStorage for us')
 
     // when there's no localstorage, show the save button
-    const saveButton = document.querySelector('#save')
+    var saveButton = document.querySelector('#save')
     saveButton.style.display = 'block'
 
 }
 
 // show selected shirt or trui
 function shirtPreview() {
-    const preview = document.querySelector('.preview')
-    const shirt = document.querySelector('.previewShirt')
-    const trui = document.querySelector('.previewTrui')
+    var preview = document.querySelector('.preview')
+    var shirt = document.querySelector('.previewShirt')
+    var trui = document.querySelector('.previewTrui')
 
     preview.style.display = 'initial'
     shirt.style.display = 'block'
@@ -150,8 +149,8 @@ function shirtPreview() {
 
 // Change color of shirt or trui
 function changeColor() {
-    const shirtPreview = document.querySelector('.previewShirt')
-    const truiPreview = document.querySelector('.previewTrui')
+    var shirtPreview = document.querySelector('.previewShirt')
+    var truiPreview = document.querySelector('.previewTrui')
 
     for (i = 0; i < document.querySelectorAll('input[name=stap2]').length; i++) {
         document.querySelectorAll('input[name=stap2]')[i].addEventListener('click', function () {
@@ -207,8 +206,8 @@ function changeText() {
 
 // Change text of shirt or trui
 function changeTextColor() {
-    const textShirt = document.querySelector('#textShirt')
-    const textTrui = document.querySelector('#textTrui')
+    var textShirt = document.querySelector('#textShirt')
+    var textTrui = document.querySelector('#textTrui')
 
     for (i = 0; i < document.querySelectorAll('input[name=stap4]').length; i++) {
         document.querySelectorAll('input[name=stap4]')[i].addEventListener('click', function () {
