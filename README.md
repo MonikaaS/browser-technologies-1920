@@ -71,6 +71,12 @@ font-size: 1.5em;
 
 Voor mijn fonts maak ik gebruik van custom fonts [dit wordt bijvoorbeeld niet ondersteunt door oude browser zoals IE 8 of opera mini](https://caniuse.com/#search=%40font-face) 
 
+kan je oplossen, door achter het font een fallback font neer te zetten
+
+```css
+font-family: 'Baloo Chettan 2', cursive/*<-- fallback*/;
+```
+
 **4. overig**
 
 Voor de rest maak ik gebruik van **animaties, transforms, svg styling, flexbox, @media print**. 
