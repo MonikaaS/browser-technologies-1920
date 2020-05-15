@@ -201,7 +201,7 @@ Tijdens dit vak heb ik vooral geleerd om met een andere denkwijze naar het web t
 
 Ik heb tijdens dit vak  geleerd om als eerste naar de kern functionaliteit te kijken en dat in lagen op te bouwen. Dus wat gebeurd er als je `js` & `css` uit staan? Kunnen de verschillende gebruikers nog steeds de kern functionaliteiten uit voeren?
 
-Ook heb ik geleerd dat je rekening houdt dat gebruikers op verschillende browsers zitten en daarvoor heb je feature detection nodig. Wat gebeurd als bepaalde features niet ondersteund worden? Hoe ga je dat oplossen? Hoe belangrijk zijn deze features?
+Ook heb ik geleerd dat je rekening houdt dat gebruikers op verschillende browsers zitten en daarvoor heb je feature detection nodig. Wat gebeurd er als bepaalde features niet ondersteund worden? Hoe ga je dat oplossen? Hoe belangrijk zijn deze features?
 
 Op deze manier kan je, per laag het zo mooi en prettig mogelijk proberen te maken voor verschillende gebruikers op verschillende browsers. 
 
