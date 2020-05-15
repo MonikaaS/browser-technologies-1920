@@ -194,6 +194,17 @@ Voeg bijvoorbeeld ook een `html lang` attribute toe, zo kan de screenreader zien
 
 ![met afbeelding](docs/img/readme/schets2.jpg)
 
+## Conclusie
+In het begin zat ik echt tegen dit vak op, omdat het mij erg ingewikkeld leek en het was veel info dat je moest verwerken. Maar uitendelijk vond ik het erg interessant.
+
+Tijdens dit vak heb ik vooral geleerd om met een andere denkwijze naar het web te kijken. Hiervoor wilde ik alleen maar een website maken die er mooi uitziet met coole animaties enzo. Ik stond er helemaal niet bij stil dat niet iedereen op de zelfde manier als jij over het web navigeert en dat je website er dan ook niet voor iedereen er zo mooi en cool uitziet. En vooral niet functioneel is.
+
+Ik heb tijdens dit vak  geleerd om als eerste naar de kern functionaliteit te kijken en dat in lagen op te bouwen. Dus wat gebeurd er als je `js` & `css` uit staan? Kunnen de verschillende gebruikers nog steeds de kern functionaliteiten uit voeren?
+
+Ook heb ik geleerd dat je rekening houdt dat gebruikers op verschillende browsers zitten en daarvoor heb je feature detection nodig. Wat gebeurd als bepaalde features niet ondersteund worden? Hoe ga je dat oplossen? Hoe belangrijk zijn deze features?
+
+Op deze manier kan je, per laag het zo mooi en prettig mogelijk proberen te maken voor verschillende gebruikers op verschillende browsers. 
+
 ## To do/wishlist
 
 - [ ] tekst kunnen verkleinen, vergroten etc.
