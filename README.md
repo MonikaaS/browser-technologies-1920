@@ -224,7 +224,7 @@ Onder de kop [progressive enhancement](#progressive-enhancement) laat ik zien ho
 
 > Student kan uitleggen wat Feature detection is.
 
-Met feature detection kijk of een bepaalde browser ondersteuning biedt voor een bepaalde feature in `css` of `js`. Mocht die feature een kern kwaliteit zijn en niet ondersteunt worden door de browser, schrijf je hier een fallback voor. Zodat de gebruiker alsnog gebruik kan maken van de feature.
+Met feature detection kijk je of een bepaalde browser ondersteuning biedt voor een bepaalde feature in `css` of `js`. Mocht die feature een kern kwaliteit zijn en niet ondersteunt worden door de browser, schrijf je hier een fallback voor. Zodat de gebruiker alsnog gebruik kan maken van de feature.
 
 > Student laat zien hoe Feature Detection kan worden toegepast in Web Development
 
