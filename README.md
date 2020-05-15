@@ -199,11 +199,36 @@ In het begin zat ik echt tegen dit vak op, omdat het mij erg ingewikkeld leek en
 
 Tijdens dit vak heb ik vooral geleerd om met een andere denkwijze naar het web te kijken. Hiervoor wilde ik alleen maar een website maken die er mooi uitziet met coole animaties enzo. Ik stond er helemaal niet bij stil dat niet iedereen op de zelfde manier als jij over het web navigeert en dat je website er dan ook niet voor iedereen er zo mooi en cool uitziet. En vooral niet functioneel is.
 
-Ik heb tijdens dit vak  geleerd om als eerste naar de kern functionaliteit te kijken en dat in lagen op te bouwen. Dus wat gebeurd er als je `js` & `css` uit staan? Kunnen de verschillende gebruikers nog steeds de kern functionaliteiten uit voeren?
 
-Ook heb ik geleerd dat je rekening houdt dat gebruikers op verschillende browsers zitten en daarvoor heb je feature detection nodig. Wat gebeurd er als bepaalde features niet ondersteund worden? Hoe ga je dat oplossen? Hoe belangrijk zijn deze features?
+# 
 
-Op deze manier kan je, per laag het zo mooi en prettig mogelijk proberen te maken voor verschillende gebruikers op verschillende browsers. 
+> Student kan de core functionaliteit van een use case doorgronden
+
+Als eerste heb ik meteen een [opsomming gemaakt van kern functionaliteiten](#create-your-own-shirt) gemaakt met wat de gebruiker ten alle tijden moet kunnen doen. Dat heb ik dan weer verwerkt in mijn [wireflows](#wireflows)
+
+> Toegankelijkheid: De user experience is goed
+
+Onder het kopje [accesibility](#accesibility) omschrijf ik hoe ik dit heb aangepakt en zie je ook een content audit. Ik heb vooral rekening gehouden dat alles goed samenwerkt, dus mocht je bijvoorbeeld slecht de kleuren zien en alleen gebruik kunnen maken van een toetsenbord. Dan zie je alsnog het verschil tussen wat je geselecteerd hebt en niet.
+
+> Readme: In de beschrijving van het project staat een probleemdefinitie, hoe het probleem is opgelost en een uitleg van de code.
+
+De beschrijving van mijn project en hoe ik dit heb opgelost staan beschreven in mijn readme. Een uitleg van mijn code en hoe ik bepaalde problemen heb opgelost staat onder het kopje [feature detectie](#feature-detection)
+
+> Student kan uitleggen wat Progressive enhancement is.
+
+Progressive enhancement is vanuit je core functionaliteit steeds een laagje meer toe voegen. Dus als je alleen `html` hebt, doen de belangrijkste functionaliteiten het. met `css` voeg je een stukje user experience toe, alles is gestijld en er zijn animaties. Als laatste voeg je `js` toe, bepaalde functies werken wat smoother, je functies kunnen nu clientside werken, zonder de pagina steeds te herladen.
+
+> Student laat zien hoe Progressive Enhancement toe te passen in Web Development
+
+Onder de kop [progressive enhancement](#progressive-enhancement) laat ik zien hoe ik alle lagen heb toe gepast.
+
+> Student kan uitleggen wat Feature detection is.
+
+Met feature detection kijk of een bepaalde browser ondersteuning biedt voor een bepaalde feature in `css` of `js`. Mocht die feature een kern kwaliteit zijn en niet ondersteunt worden door de browser, schrijf je hier een fallback voor. Zodat de gebruiker alsnog gebruik kan maken van de feature.
+
+> Student laat zien hoe Feature Detection kan worden toegepast in Web Development
+
+Onder de kop [feature detectie](#feature-detection) kun je zien hoe ik feature detectie heb toegepast.
 
 ## To do/wishlist
 
